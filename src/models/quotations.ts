@@ -19,6 +19,17 @@ export default class Quotations {
     this.list = quotations.list.map((quotation: QuotationDto) => new Quotation(quotation));
   }
 
+  /**
+   * Finds quotations by attribution (author)
+  */  
+  public findByAttribution(attributed: string): Quotation[] {
+    return this.list.filter((quotation: Quotation) => quotation.attributed === attributed);
+  }
+
+  public getRandom(): Quotation {
+    return this.list[Math.floor(Math.random() * this.list.length)];
+  }
+
   private load() {
     this.file = readFileSync(this.path as string);
     return JSON.parse(this.file.toString());
@@ -33,9 +44,5 @@ export default class Quotations {
       config: {}
     };
     writeFileSync(this.path as string, JSON.stringify(quotations, null, 2));
-  }
-
-  public getRandom(): Quotation {
-    return this.list[Math.floor(Math.random() * this.list.length)];
   }
 }
