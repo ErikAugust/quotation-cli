@@ -24,6 +24,17 @@ export default class Quotations {
     return JSON.parse(this.file.toString());
   }
 
+  /**
+   * Saves the current Todo nstance to the Todo JSON file
+   */
+   public save(): void {
+    const quotations = {
+      list: this.list,
+      config: {}
+    };
+    writeFileSync(this.path as string, JSON.stringify(quotations, null, 2));
+  }
+
   public getRandom(): Quotation {
     return this.list[Math.floor(Math.random() * this.list.length)];
   }

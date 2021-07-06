@@ -28,9 +28,26 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
+* [`quote add [FILE]`](#quote-add-file)
 * [`quote hello`](#quote-hello)
 * [`quote help [COMMAND]`](#quote-help-command)
-* [`quote random [FILE]`](#quote-random-file)
+* [`quote random`](#quote-random)
+
+## `quote add [FILE]`
+
+describe the command here
+
+```
+USAGE
+  $ quote add [FILE]
+
+OPTIONS
+  -f, --force
+  -h, --help       show CLI help
+  -n, --name=name  name to print
+```
+
+_See code: [src/commands/add.ts](https://github.com/ErikAugust/quotation-cli/blob/v0.0.0/src/commands/add.ts)_
 
 ## `quote hello`
 
@@ -60,18 +77,16 @@ OPTIONS
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.2.2/src/commands/help.ts)_
 
-## `quote random [FILE]`
+## `quote random`
 
-describe the command here
+displays a random quotation
 
 ```
 USAGE
-  $ quote random [FILE]
+  $ quote random
 
-OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
+ALIASES
+  $ quote r
 ```
 
 _See code: [src/commands/random.ts](https://github.com/ErikAugust/quotation-cli/blob/v0.0.0/src/commands/random.ts)_

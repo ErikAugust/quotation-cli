@@ -10,18 +10,14 @@ export default class Random extends Command {
   async run() {
     const {args} = this.parse(Random);
     const quotes = new Quotations();
-
-    // TODO: Display ASCII art
-
-    // Display the quote using chalk, adding in attribution:
     const quote = quotes.getRandom();
 
     await displayAsciiArt('Quote');
-
+    
     this.log(
       `\n${chalk.blue.bold.italic(`"${quote.quote}"`)}\n`
     );
-
+    
     if (quote.attributed) {
       this.log(`- ${quote.attributed}\n`)
     }
