@@ -28,37 +28,41 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`quote add [FILE]`](#quote-add-file)
-* [`quote hello`](#quote-hello)
+* [`quote add`](#quote-add)
+* [`quote attributed [ATTRIBUTED]`](#quote-attributed-attributed)
 * [`quote help [COMMAND]`](#quote-help-command)
 * [`quote random`](#quote-random)
 
-## `quote add [FILE]`
+## `quote add`
 
-describe the command here
+adds a quotation
 
 ```
 USAGE
-  $ quote add [FILE]
+  $ quote add
 
-OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
+ALIASES
+  $ quote new
 ```
 
 _See code: [src/commands/add.ts](https://github.com/ErikAugust/quotation-cli/blob/v0.0.0/src/commands/add.ts)_
 
-## `quote hello`
+## `quote attributed [ATTRIBUTED]`
 
-describe the command here
+displays all quotes for attribution by name
 
 ```
 USAGE
-  $ quote hello
+  $ quote attributed [ATTRIBUTED]
+
+ARGUMENTS
+  ATTRIBUTED  name of the attributed
+
+ALIASES
+  $ quote a
 ```
 
-_See code: [src/commands/hello.ts](https://github.com/ErikAugust/quotation-cli/blob/v0.0.0/src/commands/hello.ts)_
+_See code: [src/commands/attributed.ts](https://github.com/ErikAugust/quotation-cli/blob/v0.0.0/src/commands/attributed.ts)_
 
 ## `quote help [COMMAND]`
 
@@ -84,6 +88,9 @@ displays a random quotation
 ```
 USAGE
   $ quote random
+
+OPTIONS
+  -a, --attributed=attributed  finds quotations by attribution
 
 ALIASES
   $ quote r

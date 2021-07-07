@@ -27,7 +27,7 @@ export default class Random extends Command {
     }
 
     this.log(
-      `\n${chalk.blue.bold.italic(`"${quote.quote}"`)}\n`
+      `\n${chalk.yellow.bold(`"${quote.quote}"`)}\n`
     );
     
     if (quote.attributed) {

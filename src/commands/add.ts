@@ -6,7 +6,7 @@ import chalk from 'chalk';
 
 export default class Add extends Command {
   static description = 'adds a quotation';
-  static aliases = ['a', 'new'];
+  static aliases = ['new'];
 
   async run() {
     const {args} = this.parse(Add);
@@ -21,7 +21,7 @@ export default class Add extends Command {
 
     await displayAsciiArt('Quote');
     this.log(
-      `\n${chalk.blue.bold.italic(`"${quote.quote}"`)}\n`
+      `\n${chalk.yellow.bold(`"${quote.quote}"`)}\n`
     );
     
     if (quote.attributed) {

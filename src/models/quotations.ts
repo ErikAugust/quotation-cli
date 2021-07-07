@@ -6,8 +6,6 @@ config();
 
 export const PATH: string | undefined = process.env.QUOTATIONS_PATH;
 
-console.log(PATH);
-
 export default class Quotations {
   path: string | undefined;
   file!: Buffer;

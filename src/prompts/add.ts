@@ -22,7 +22,7 @@ export function addQuotationPrompt() {
       {
         name: 'source',
         type: 'input',
-        message: 'Enter the source (book) of the quotation:',
+        message: 'Enter the source (book, etc) of the quotation:',
       },
       {
         name: 'page',
